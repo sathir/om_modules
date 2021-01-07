@@ -77,6 +77,9 @@
            <field name="name_seq" domain="[('name_seq','ilike',self)]"/>
            <field name="patient_name" domain="[('patient_name','ilike',self)]"/>
            <field name="patient_age" domain="[('patient_age','=',True)]"/>
+           <separator />
+            <filter string ="Male" name = "male" domain = "[('gender', '=', 'male')]"/>
+            <filter string ="FeMale" name = "fe_male" domain = "[('gender', '=', 'Female')]"/>
         </search>
     </field>
 </record>
