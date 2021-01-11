@@ -12,6 +12,7 @@
             <field name="patient_name"/>
             <field name="gender"/>
             <field name="patient_age"/>
+            <field name="age_group"/>
             <field name="notes"/>
         </tree>
     </field>
@@ -38,6 +39,9 @@
                     </group>
                     <group>
                     <field name="gender"/>
+                    </group>
+                    <group>
+                    <field name="age_group"/>
                     </group>
                 </group>
                 <group>
@@ -79,7 +83,9 @@
            <field name="patient_age" domain="[('patient_age','=',True)]"/>
            <separator />
             <filter string ="Male" name = "male" domain = "[('gender', '=', 'male')]"/>
-            <filter string ="FeMale" name = "fe_male" domain = "[('gender', '=', 'Female')]"/>
+            <filter string ="FeMale" name = "fe_male" domain = "[('gender', '=', 'female')]"/>
+            <!-- <filter string ="Minor" name = "minor" domain = "[('age_group', '=', 'minor')]"/>
+            <filter string ="Major" name = "major" domain = "[('age_group', '=', 'major')]"/> -->
         </search>
     </field>
 </record>
