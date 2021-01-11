@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flectra import models, fields, api, _
+from flectra.exceptions import ValidationError
 
 # class openacademy(models.Model):
 #     _name = 'openacademy.openacademy'
@@ -23,8 +24,15 @@ class HospitalPatient(models.Model):
     _description = 'Patient Records'
     _rec_name = 'patient_name'
 
+    @api.constrains('patient_age')
+    def check_age(self):
+        for rec in self:
+            if rec.patient_age <=5:
+                raise ValidationError(_('The Age must be Greater than 5'))
+
+
     patient_name = fields.Char(String='Name', required=True)
-    patient_age = fields.Integer('Age')
+    patient_age = fields.Integer('Age', track_visibility="always")
     notes = fields.Text(String='Notes')
     image = fields.Binary(String='Image')
     name_seq = fields.Char(string='Patient Sequence', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New'))
