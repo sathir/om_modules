@@ -13,6 +13,7 @@
         'security/ir.model.access.csv',
         'data/hp_sequence_data.xml',
         'views/patient.xml',
+        'views/appointment.xml',
     ],
     # data files containing optionally loaded demonstration data
     'demo': [],
