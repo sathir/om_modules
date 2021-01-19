@@ -12,7 +12,7 @@
     'data': [
         'security/ir.model.access.csv',
         'data/hp_sequence_data.xml',
-        'patient.xml',
+        'views/patient.xml',
     ],
     # data files containing optionally loaded demonstration data
     'demo': [],
