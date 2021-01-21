@@ -7,12 +7,13 @@
     <field name="name">hospital.appointment.tree</field>
     <field name="model">hospital.appointment</field>
     <field name="arch" type="xml">
-        <tree string="Appointment">
-            <field name="name"/>
-            <field name="patient_id"/>
-            <field name="patient_age"/>
-            <field name="appointment_date"/>
-        </tree>
+    <tree string="Appointment">
+        <field name="name"/>
+        <field name="patient_id"/>
+        <field name="patient_age"/>
+        <field name="appointment_date"/>
+        <field name="notes"/>
+    </tree>
     </field>
 </record>
 
